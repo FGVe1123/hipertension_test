@@ -9,7 +9,7 @@ import streamlit as st
 
 
 
-dataset = pd.read_csv("D:\Propietario\Desktop\TODO\Modulares\ENFERMEDADES PROYECTO\DATASET\datosLimpios.csv")
+dataset = pd.read_csv("datosLimpios.csv")
 df = pd.DataFrame(dataset) #generar el dataframe para su manipulacion
 
 df = df.sample(frac=1).reset_index(drop=True)
@@ -83,4 +83,5 @@ st.write("Accuracy:", accuracy)
 st.write("F1 Score:", f1_score)
 st.write("Matriz de confusión:")
 st.write(confusion_matrix)
+
 
