@@ -47,12 +47,12 @@ print(confusion_matrix)
     #solicitud de datos
 
 #entrada de datos
-sexo_entrada = st.number_input("Sexo (0 para mujer, 1 para hombre):")
-edad_entrada = st.number_input("Edad:")
+sexo_entrada = st.number_input("Sexo (0 para mujer, 1 para hombre):", value=0)
+edad_entrada = st.number_input("Edad:", value=0)
 peso_entrada = st.number_input("Peso:", value=0)
 estatura_entrada = st.number_input("Estatura en cm" , value=0)
 #resultado_glucosa_entrada = st.number_input("Resultado de glucosa:")
-tension_arterial_entrada = st.number_input("Tensión arterial:")
+tension_arterial_entrada = st.number_input("Tensión arterial:", value=0)
 
 # Validamos que la estatura no sea cero para evitar la división por cero.
 if estatura_entrada > 0:
@@ -83,5 +83,6 @@ st.write("Accuracy:", accuracy)
 st.write("F1 Score:", f1_score)
 st.write("Matriz de confusión:")
 st.write(confusion_matrix)
+
 
 
