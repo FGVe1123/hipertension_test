@@ -53,7 +53,7 @@ else:
     st.warning("Ingresa un valor de estatura mayor a 0 para calcular el IMC.")
 
 
-if st.button("Predecir"):
+if st.button("Resultado"):
     #input_data = [[sexo_entrada, edad_entrada, resultado_glucosa_entrada, estatura_entrada, peso_entrada, tension_arterial_entrada, masa_corporal]]
     input_data = [[sexo_entrada, edad_entrada, estatura_entrada, peso_entrada, masa_corporal, tension_arterial_entrada]]
     input_data = pd.DataFrame(input_data, columns=X.columns)
@@ -71,6 +71,7 @@ st.write("Accuracy:", accuracy)
 st.write("F1 Score:", f1_score)
 st.write("Matriz de confusión:")
 st.write(confusion_matrix)
+
 
 
 
