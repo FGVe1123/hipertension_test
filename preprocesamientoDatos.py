@@ -3,9 +3,6 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, f1_score, confusion_matrix
 import streamlit as st
-#from sklearn.tree import export_graphviz
-#mport graphviz
-
 
 
 dataset = pd.read_csv("datosLimpios.csv")
@@ -34,14 +31,6 @@ print("F1 Score:", f1_score)
 confusion_matrix = confusion_matrix(y_test, y_pred)
 print("Matriz de confusión:")
 print(confusion_matrix)
-
-
-
-# Visualizar el árbol de decisión con Graphviz para mejor calidad
-#dot_data = export_graphviz(model, out_file=None, feature_names=X.columns, filled=True, rounded=True, special_characters=True) #class_names=['No', 'Si']
-#graph = graphviz.Source(dot_data)
-#graph
-#graph.render("arbol_decision")
 
     #solicitud de datos
 
@@ -82,6 +71,7 @@ st.write("Accuracy:", accuracy)
 st.write("F1 Score:", f1_score)
 st.write("Matriz de confusión:")
 st.write(confusion_matrix)
+
 
 
 
