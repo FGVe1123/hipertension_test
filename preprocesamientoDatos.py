@@ -1,5 +1,4 @@
 import pandas as pd
-
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, f1_score, confusion_matrix
@@ -83,6 +82,7 @@ st.write("Accuracy:", accuracy)
 st.write("F1 Score:", f1_score)
 st.write("Matriz de confusión:")
 st.write(confusion_matrix)
+
 
 
 
